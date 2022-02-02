@@ -3,20 +3,21 @@
 This project will discuss how you can easily deploy Tomcat 9 on Debian Linux with Ansible.
 The standard way of installing Tomcat on a Linux system such as Debian is manual and time-consuming. I wrote an Ansible role to simplify the process.
 
-## Role info
+## Project role
 
 > Install and deploy Apache Tomcat 9 on Debian With Ansible.
 
-## Tasks in the role
+## Project tasks
 
-This role contains tasks to:
+The Playbook file (tomcat_deploy) contains tasks to:
 
-- Install basic packages required
-- Install Java
-- Add tomcat user and group
-- Download and install tomcat
+- Download and install tomcat version 9
+- Heap paramtring in dev/prod environnements
+- sample.war deployment
 
-## How to use this role
+## How to use this project
+
+- Open your terminal
 
 - Clone the Project:
 
@@ -31,7 +32,3 @@ $ cd TestDevops
 ```
 $ sudo ansible-playbook data/tomcat_deploy.yml
 ```
-
-- Execution example:
-
-![image](https://i.ibb.co/wcwwWnX/Capture-d-cran-2022-02-02-223440.png)
