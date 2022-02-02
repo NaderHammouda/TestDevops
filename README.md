@@ -41,32 +41,6 @@ PLAY [Tomcat deployment playbook] **********************************************
 TASK [Gathering Facts] *********************************************************************************************************************************
 ok: [deb01]
 
-TASK [tomcat : Add the OS specific variables] **********************************************************************************************************
-ok: [deb01] => (item=/tmp/tomcat-ansible/roles/tomcat/vars/Debian.yml)
-
-TASK [tomcat : include_tasks] **************************************************************************************************************************
-included: /tmp/tomcat-ansible/roles/tomcat/tasks/tomcat-setup-Debian.yml for deb01
-
-TASK [tomcat : Ensure the system can use the HTTPS transport for APT.] *********************************************************************************
-ok: [deb01]
-
-TASK [tomcat : Install APT HTTPS transport.] ***********************************************************************************************************
-skipping: [deb01]
-
-TASK [tomcat : Install basic packages] *****************************************************************************************************************
-[WARNING]: Updating cache and auto-installing missing dependency: python-apt
-
-changed: [deb01]
-
-TASK [tomcat : Install Default Java (Debian/Ubuntu)] ***************************************************************************************************
-changed: [deb01]
-
-TASK [tomcat : Add tomcat group] ***********************************************************************************************************************
-changed: [deb01]
-
-TASK [tomcat : Add "tomcat" user] **********************************************************************************************************************
-changed: [deb01]
-
 TASK [tomcat : Download Tomcat] ************************************************************************************************************************
 changed: [deb01]
 
@@ -83,5 +57,5 @@ TASK [tomcat : Start and enable tomcat] ****************************************
 changed: [deb01]
 
 PLAY RECAP *********************************************************************************************************************************************
-deb01                      : ok=13   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+deb01                      : ok=5   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 ```
