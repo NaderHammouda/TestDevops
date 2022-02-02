@@ -33,6 +33,55 @@ $ cd TestDevops
 $ sudo ansible-playbook data/tomcat_deploy.yml
 ```
 
-- Execution example:
+- A successful installation output will show output similar to below:
 
-![image](https://i.ibb.co/wcwwWnX/Capture-d-cran-2022-02-02-223440.png)
+```
+PLAY [Tomcat deployment playbook] **********************************************************************************************************************
+
+TASK [Gathering Facts] *********************************************************************************************************************************
+ok: [deb01]
+
+TASK [tomcat : Add the OS specific variables] **********************************************************************************************************
+ok: [deb01] => (item=/tmp/tomcat-ansible/roles/tomcat/vars/Debian.yml)
+
+TASK [tomcat : include_tasks] **************************************************************************************************************************
+included: /tmp/tomcat-ansible/roles/tomcat/tasks/tomcat-setup-Debian.yml for deb01
+
+TASK [tomcat : Ensure the system can use the HTTPS transport for APT.] *********************************************************************************
+ok: [deb01]
+
+TASK [tomcat : Install APT HTTPS transport.] ***********************************************************************************************************
+skipping: [deb01]
+
+TASK [tomcat : Install basic packages] *****************************************************************************************************************
+[WARNING]: Updating cache and auto-installing missing dependency: python-apt
+
+changed: [deb01]
+
+TASK [tomcat : Install Default Java (Debian/Ubuntu)] ***************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Add tomcat group] ***********************************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Add "tomcat" user] **********************************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Download Tomcat] ************************************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Create a tomcat directory] **************************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Extract tomcat archive] *****************************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Copy tomcat service file] ***************************************************************************************************************
+changed: [deb01]
+
+TASK [tomcat : Start and enable tomcat] ****************************************************************************************************************
+changed: [deb01]
+
+PLAY RECAP *********************************************************************************************************************************************
+deb01                      : ok=13   changed=9    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+```
