@@ -57,5 +57,5 @@ TASK [tomcat : Start and enable tomcat] ****************************************
 changed: [deb01]
 
 PLAY RECAP *********************************************************************************************************************************************
-deb01                      : ok=5   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+deb01                      : ok=6   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 ```
