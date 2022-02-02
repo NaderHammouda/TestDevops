@@ -30,4 +30,4 @@ $ sudo ansible-playbook data/tomcat_deploy.yml
 
 - Execution example:
 
-![image](https://ibb.co/dmLL2Nq)
+![image](https://i.ibb.co/wcwwWnX/Capture-d-cran-2022-02-02-223440.png)
