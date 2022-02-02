@@ -56,11 +56,11 @@
 
     - name: Set Java Heap max size to :256Mo if env is dev
       shell: echo "export JAVA_OPTS='-Xmx256m'" > /etc/environment && source /etc/environment
-      when: stage == "dev"
+      when: ENVIRONMENT == "dev"
     
     - name: Set Java Heap max size to :512Mo if env is prod
       shell: echo "export JAVA_OPTS='-Xmx256m'" > /etc/environment && source /etc/environment
-      when: stage == "prod"
+      when: ENVIRONMENT == "prod"
     
     - name: Extract tomcat archive
       unarchive:
