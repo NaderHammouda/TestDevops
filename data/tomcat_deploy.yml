@@ -1,5 +1,6 @@
 ---
-- hosts: tomcat-nodes
+- hosts: localhost
+  connection: local
   become: yes
   remote_user: root
   vars_files:
